@@ -1,15 +1,10 @@
 import { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-import { createRouter, RouterProvider } from '@tanstack/react-router'
 import './main.css'
-
-// Import genTree
-import { routeTree } from './routeTree.gen.ts'
-
-const router = createRouter({ routeTree })
+import App from './App'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-    <RouterProvider router={router} />
+    <App />
   </StrictMode>,
 )
